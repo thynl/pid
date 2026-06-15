@@ -1,0 +1,214 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ===== Claude Code (CLAUDE.md, .claude/settings.json은 공유)=====
+.claude/settings.local.json
+.claude/commands/local/
+.claude/agents/local/
+.claude/*.log
+
+# ===== Virtual environments =====
+venv/
+.venv/
+.venv-*/          # 클러스터 노드별 venv (예: .venv-cu124, .venv-cu128)
+env/
+ENV/
+.env
+.conda/
+conda-env/
+
+# ===== Jupyter Notebook =====
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+profile_default/
+ipython_config.py
+
+# ===== IDE / Editor =====
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.spyderproject
+.spyproject
+.ropeproject
+
+# ===== OS =====
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ===== Testing / Coverage =====
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+.hypothesis/
+
+# ===== Type checking / Linting =====
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.ruff_cache/
+
+# ===== 딥러닝: 모델 체크포인트 / 가중치 =====
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+*.joblib
+*.safetensors
+*.onnx
+*.tflite
+*.pb
+*.bin
+*.msgpack
+*.npy
+*.npz
+checkpoints/
+saved_models/
+weights/
+pretrained/
+*.model
+
+# ===== 딥러닝: 데이터셋 =====
+# 기본: 모든 데이터 파일 무시
+data/raw/
+data/processed/
+data/train/
+data/eval/
+data/eval/third_party/
+data/eval/custom/
+data/raw/recipes/
+data/processed/recipes/
+benchmark
+
+# 예외: 추적할 메타데이터
+!data/dataset_info.json
+!data/README.md
+!data/**/.gitkeep
+
+*.csv
+*.tsv
+*.parquet
+*.feather
+*.arrow
+*.lmdb
+*.tfrecord
+*.tfrecords
+*.hdf
+# 작은 샘플 데이터는 추적하고 싶으면 아래처럼 예외 처리
+# !data/sample/
+# !data/README.md
+
+# ===== 실험 로그 / 트래킹 =====
+runs/
+logs/
+log/
+lightning_logs/
+tb_logs/
+tensorboard/
+events.out.tfevents.*
+wandb/
+mlruns/
+mlartifacts/
+.neptune/
+outputs/
+results/
+experiments/
+
+# ===== Hydra / 설정 관리 =====
+.hydra/
+multirun/
+
+# ===== 미디어 / 시각화 산출물 (필요시 주석 처리) =====
+*.mp4
+*.avi
+*.mov
+*.gif
+# 논문/리포트에 들어갈 figure는 추적하고 싶을 수 있으니 선택적으로
+# *.png
+# *.jpg
+# *.jpeg
+# *.pdf
+# *.svg
+
+# ===== Hugging Face / 캐시 =====
+.cache/
+huggingface/
+.huggingface/
+transformers_cache/
+torch_cache/
+
+# ===== 비밀 / 환경변수 =====
+*.env
+.env.local
+.env.*.local
+secrets.yaml
+secrets.json
+credentials.json
+*.pem
+*.key
+config.local.*
+
+# ===== 압축 파일 (일반적으로 데이터/모델) =====
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.rar
+
+# ===== 임시 / 백업 =====
+tmp/
+temp/
+.tmp/
+*.tmp
+*.bak
+*.backup
+*.old
+*.log
+
+# ===== Docs =====
+docs/_build/
+site/
+
+# ===== Misc =====
+.dvc/
+.dvcignore
+.direnv/
