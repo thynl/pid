@@ -108,15 +108,7 @@ pretrained/
 
 # ===== 딥러닝: 데이터셋 =====
 # 기본: 모든 데이터 파일 무시
-data/raw/
-data/processed/
-data/train/
-data/eval/
-data/eval/third_party/
-data/eval/custom/
-data/raw/recipes/
-data/processed/recipes/
-benchmark
+data/
 
 # 예외: 추적할 메타데이터
 !data/dataset_info.json
