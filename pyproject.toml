@@ -1,0 +1,30 @@
+[project]
+name = "pid"
+version = "0.1.0"
+description = "PID foundation model"
+requires-python = ">=3.11"
+authors = [ { name = "Taehyun Lee", email = "taehyun.lee@vision.snu.ac.kr" } ]
+ 
+# torch / torchvision / torchaudio 와 flash-attn 은 노드별 CUDA wheel 이라
+# setup.sh 에서 따로 설치한다 (여기 넣으면 잘못된 wheel 이 끌려올 수 있음).
+dependencies = [
+    "timm",          # 계층적 비전 백본 + features_only 멀티스케일 피쳐맵
+    "transformers",  # 디코더 / generate / VisionEncoderDecoder
+    "accelerate",    # 분산학습 / 학습 루프
+    "datasets",      # 데이터 로딩
+    "outlines",      # DSL 문법 제약(constrained) 디코딩
+    "pillow",        # 이미지 IO
+    "einops",        # 텐서 reshape
+    "wandb",         # 로깅
+]
+ 
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["*"]
+
+[tool.uv.extra-build-dependencies]
+flash-attn = ["torch", "wheel"]
