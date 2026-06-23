@@ -204,3 +204,4 @@ site/
 .dvc/
 .dvcignore
 .direnv/
+third_party/

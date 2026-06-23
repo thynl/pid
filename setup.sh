@@ -3,12 +3,12 @@
 #
 # 사용법:
 #   Bare metal (예: A6000 호스트):
-#     uv venv .venv --python 3.12 --prompt pid
+#     uv venv .venv --python 3.12 --prompt pid --seed
 #     source .venv/bin/activate
 #     bash setup.sh
 #
 #   Docker (NGC PyTorch 이미지 안, 예: B200 클라우드):
-#     uv venv .venv --python 3.12 --system-site-packages --prompt pid
+#     uv venv .venv --python 3.12 --system-site-packages --prompt pid --seed
 #     source .venv/bin/activate
 #     MLLM_SKIP_TORCH_INSTALL=1 bash setup.sh
 #
